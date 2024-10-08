@@ -1,0 +1,247 @@
+/* Estilo general para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nerko One'; /* Fuente Nerko One aplicada */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total de los elementos */
+}
+
+/* Estilo del cuerpo de la página */
+body {
+    height: 100vh;
+    background-image: url("wp3925565.jpg"); /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen en el fondo */
+    background-attachment: fixed; /* Mantiene la imagen fija durante el desplazamiento */
+    color: #ffffff; /* Color del texto */
+    margin: 0; /* Elimina el margen predeterminado */
+    font-size: 16px; /* Tamaño de fuente base */
+}
+
+/* Estilo del contenedor principal */
+main {
+    display: flex;
+    flex-direction: column; /* Organiza las secciones en una columna */
+    align-items: center; /* Centra horizontalmente todas las secciones */
+    justify-content: center; /* Centra verticalmente las secciones */
+    flex: 1; /* Permite que el contenido principal ocupe el espacio disponible */
+    padding: 40px;
+    padding-left: 900px; /* Ajusta este valor para mover las secciones a la derecha */
+    width: 500%;
+}
+
+/* Estilo para la sección principal */
+.section {
+    display: flex;
+    justify-content: center; /* Alinea las divisiones horizontalmente */
+    margin: 20px 0; /* Margen entre las secciones */
+    width: 100%; /* Ancho completo de la sección */
+    max-width: 900px; /* Ancho máximo de la sección */
+    padding: 20px;
+    border: 1px solid #cccccc00; /* Línea externa que envuelve toda la sección */
+    border-radius: 10px;
+    background-color: #00082c83; /* Fondo para las secciones */
+    margin-left: 120px; /* Ajusta este valor para mover las secciones a la derecha */
+}
+
+/* Estilo para cada división dentro de una sección */
+.division {
+    flex: 1; /* Hace que cada div ocupe el mismo espacio */
+    margin: 0 10px; /* Espacio entre los divs */
+    padding: 20px;
+    text-align: left; /* Corrige la alineación del texto */
+    font-size: 1.1rem;
+    border-left: 1px solid #ffffff; /* Línea que separa las divisiones */
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+}
+
+.division img {
+    max-width: 100%; /* Asegura que la imagen no se desborde del div */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    border: 1px solid #001499; /* Agrega un borde alrededor de la imagen */
+    border-radius: 5px; /* Bordes redondeados en la imagen */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+
+/* Quita el borde izquierdo de la primera división en cada sección */
+.division:first-child {
+    border-left: none; 
+}
+
+/* Estilo del encabezado (header) */
+header {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    background-color: #00082c83; /* Fondo para las secciones */
+    background-size: cover; /* Asegura que el gradiente cubra toda el área del encabezado */
+    background-position: center; /* Centra el gradiente */
+    background-attachment: fixed; /* Mantiene el fondo fijo durante el desplazamiento */
+    height: 20vh; /* Altura del encabezado como un porcentaje de la altura de la ventana */
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0); /* Sombra alrededor del encabezado */
+    border-radius: 2px; /* Bordes redondeados */
+    padding: 1em; /* Espacio alrededor del contenido del encabezado */
+    position: relative; /* Posiciona el encabezado en relación a su contenedor padre */
+}
+
+/* Contenedor del título y del menú en el header */
+.header-content {
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en una columna */
+    width: 100%; /* Ancho completo del encabezado */
+    height: 100%; /* Altura completa del encabezado */
+    position: relative; /* Posiciona el contenedor en relación a su contenedor padre */
+}
+
+/* Estilo del título principal */
+h1 {
+    font-size: 3.5rem; /* Tamaño de la fuente del título */
+    color: #ffffff; /* Color del texto del título */
+    margin: 0; /* Elimina el margen para centrar mejor */
+    text-shadow: 2px 2px 4px rgba(0, 0, 102, 0); /* Sombra del texto del título */
+    position: absolute; /* Posiciona el título en relación a su contenedor */
+    top: 60%; /* Ajusta la posición desde el borde superior del encabezado */
+    left: 10%; /* Ajusta la posición desde el borde izquierdo del encabezado */
+    transform: translateY(-70%); /* Centra verticalmente el título */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilo del menú de navegación */
+nav {
+    display: flex;
+    justify-content: flex-end; /* Alinea el menú a la derecha dentro del contenedor de encabezado */
+    gap: 10px; /* Espacio entre los elementos del menú */
+    margin-top: auto; /* Empuja el menú hacia abajo dentro del contenedor */
+    padding: 0 1em; /* Espacio a los lados del menú */
+    position: absolute; /* Posiciona el menú en relación a su contenedor */
+    bottom: 30%; /* Ajusta la posición desde el borde inferior del encabezado */
+    right: 2%; /* Ajusta la posición desde el borde derecho del encabezado */
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.0rem;
+    padding: 10px 15px;
+    transition: color 0s, background-color 0s;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 102);
+}
+
+nav a:hover {
+    color: #b3e0ff;
+    background-color: rgba(0, 51, 102, 0);
+}
+
+nav a.active {
+    background-color: rgba(0, 51, 153, 0);
+    border: 2px solid #66b3ff00;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+h4 {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.8rem;
+    padding: 10px 15px;
+    transition: color 0s, background-color 0s;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 102, 0.559);
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: #00082c83; /* Fondo para las secciones */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: relative; /* Cambiado de absolute a relative */
+    bottom: 0;
+    margin-top: 20px; /* Asegura espacio arriba del footer */
+}
+
+.footer-contact {
+    margin-top: 10px; /* Espacio entre el contenido del pie de página y el borde */
+}
+/* Contenedor del carrusel */
+
+.carousel {
+    width: 50%;
+    max-width: 260px; /* Tamaño máximo del carrusel, ajusta como prefieras */
+    height: 180px; /* Altura fija para el carrusel */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Las imágenes del carrusel */
+.carousel-images {
+    display: flex;
+    width: 100%; /* Ajusta según la cantidad de imágenes */
+    transform: translateX(0); /* Posición inicial */
+    transition: transform 5s ease; /* Transición suave */
+}
+
+/* Cada imagen */
+.carousel-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Las imágenes se ajustan al contenedor y cubren todo el espacio */
+    flex: 1 0 100%;
+}
+
+/* Activar animación al pasar el mouse */
+.carousel:hover .carousel-images {
+    animation: slide 10s infinite;
+}
+
+/* Efecto de deslizamiento */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    12.5% { transform: translateX(-100%); }
+    25% { transform: translateX(-200%); }
+    37.5% { transform: translateX(-300%); }
+    50% { transform: translateX(-400%); }
+    62.5% { transform: translateX(-500%); }
+    75% { transform: translateX(-600%); }
+    87.5% { transform: translateX(-700%); }
+    100% { transform: translateX(0); }
+}
+
+/* Puntos de navegación (opcional) */
+.carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.carousel-dots div {
+    height: 5px;
+    width: 5px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.carousel-dots div.active {
+    background-color: rgb(0, 0, 0);
+}
+/* Media Queries para pantallas más grandes */
+@media (min-width: 768px) {
+    .navbar {
+        flex-direction: row; /* Apila horizontalmente en pantallas más grandes */
+    }
+    
+    .navbar a {
+        padding: 15px; /* Ajusta el espaciado para pantallas grandes */
+    }
+}

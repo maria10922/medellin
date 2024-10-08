@@ -1,0 +1,253 @@
+/* Estilo general para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nerko One'; /* Fuente Nerko One aplicada */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total de los elementos */
+}
+
+/* Estilo del cuerpo de la página */
+body {
+    height: 100vh;
+    background-image: url("wp3925565.jpg"); /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen en el fondo */
+    background-attachment: fixed; /* Mantiene la imagen fija durante el desplazamiento */
+    color: #ffffff; /* Color del texto */
+    margin: 0; /* Elimina el margen predeterminado */
+    font-size: 16px; /* Tamaño de fuente base */
+}
+/* Contenedor principal */
+.container {
+    max-width: 1000px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 0; /* Elimina el padding predeterminado */
+    overflow: hidden; /* Evita problemas de desbordamiento */
+}
+
+/* Ajustar el tamaño del contenido dentro del contenedor */
+.section-text, .image-container {
+    max-width: 100%; /* Ajusta el ancho máximo al 100% del contenedor */
+    width: 100%; /* Asegura que el ancho sea 100% del contenedor, pero limitado por el max-width */
+}
+
+/* Estilo del encabezado (header) */
+header {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    background-image: linear-gradient(51deg, #00183761, #00183761); /* Gradiente de tonos azules oscuros */
+    background-size: cover; /* Asegura que el gradiente cubra toda el área del encabezado */
+    background-position: center; /* Centra el gradiente */
+    background-attachment: fixed; /* Mantiene el fondo fijo durante el desplazamiento */
+    height: 20vh; /* Altura del encabezado como un porcentaje de la altura de la ventana */
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2); /* Sombra alrededor del encabezado */
+    border-radius: 2px; /* Bordes redondeados */
+    padding: 1em; /* Espacio alrededor del contenido del encabezado */
+    position: relative; /* Posiciona el encabezado en relación a su contenedor padre */
+}
+
+/* Contenedor del título y del menú en el header */
+.header-content {
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en una columna */
+    width: 100%; /* Ancho completo del encabezado */
+    height: 100%; /* Altura completa del encabezado */
+    position: relative; /* Posiciona el contenedor en relación a su contenedor padre */
+}
+
+/* Estilo del título principal */
+h1 {
+    font-size: 3.5rem; /* Tamaño de la fuente del título */
+    color: #ffffff; /* Color del texto del título */
+    margin: 0; /* Elimina el margen para centrar mejor */
+    text-shadow: 2px 2px 4px rgba(0, 0, 102, 0.351); /* Sombra del texto del título */
+    position: absolute; /* Posiciona el título en relación a su contenedor */
+    top: 60%; /* Ajusta la posición desde el borde superior del encabezado */
+    left: 10%; /* Ajusta la posición desde el borde izquierdo del encabezado */
+    transform: translateY(-70%); /* Centra verticalmente el título */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilo del menú de navegación */
+nav {
+    display: flex;
+    justify-content: flex-end; /* Alinea el menú a la derecha dentro del contenedor de encabezado */
+    gap: 10px; /* Espacio entre los elementos del menú */
+    margin-top: auto; /* Empuja el menú hacia abajo dentro del contenedor */
+    padding: 0 1em; /* Espacio a los lados del menú */
+    position: absolute; /* Posiciona el menú en relación a su contenedor */
+    bottom: 30%; /* Ajusta la posición desde el borde inferior del encabezado */
+    right: 2%; /* Ajusta la posición desde el borde derecho del encabezado */
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.0rem;
+    padding: 10px 15px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 102);
+}
+
+nav a:hover {
+    color: #b3e0ff;
+    background-color: rgba(0, 51, 102, 0);
+}
+
+nav a.active {
+    background-color: rgba(0, 51, 153, 0.513);
+    border: 2px solid #66b3ff00;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+/* Estilo de las secciones */
+.top-section, .bottom-section {
+    padding: 2em; /* Espacio interno */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(0, 51, 102); /* Reducida la opacidad para mejor visibilidad de la imagen */
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+}
+
+/* Estilo específico para las secciones */
+.top-section {
+    background: linear-gradient(30deg, rgba(0, 51, 102, 0), rgba(0, 102, 204, 0)); /* Reducida la opacidad del gradiente */
+}
+
+.bottom-section {
+    background: linear-gradient(30deg, rgba(0, 102, 204, 0), rgba(0, 51, 102, 0)); /* Reducida la opacidad del gradiente */
+    border-top: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+/* Estilo del título de las secciones */
+.section-title {
+    font-size: 2.0rem;
+    text-align: center;
+    margin-bottom: 1em; /* Espacio debajo del encabezado */
+    color: #ffffff;
+    background-color: rgba(11, 14, 104, 0.537);
+    padding: 0.5em;
+    border-radius: 10px;
+}
+
+/* Estilo para las imágenes en las secciones */
+.image-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan si no caben en una línea */
+    justify-content: center; /* Centra las imágenes en la sección */
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    max-width: 100%; /* Ajusta el ancho máximo al 100% del contenedor */
+}
+
+.image-item {
+    flex: 1 1 25%; /* Permite que las imágenes se ajusten en el contenedor */
+    max-width: 25%; /* Ajusta el ancho máximo de las imágenes */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total de los elementos */
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #b4b4b4;
+    border-radius: 6px;
+    box-shadow: 0px 4px 8px rgb(0, 0, 51);
+    transition: transform 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+.image-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo del texto en las secciones */
+.section-text {
+    margin: 20px auto;
+    font-size: 1.1rem;
+    text-align: justify;
+    max-width: 800%; /* Ajusta el ancho máximo al 100% del contenedor */
+    background-color: rgba(14, 11, 104, 0.55);
+    border-radius: 8px;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif; /* Aplica la fuente Roboto */
+}
+
+/* Estilo del pie de página */
+footer {
+    background-image: linear-gradient(51deg, #00082c83, #00082c83); /* Gradiente de tonos azules oscuros */
+    color: #ffffff; /* Color del texto */
+    padding: 1em; /* Espacio interno */
+    text-align: center; /* Centra el texto */
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0); /* Sombra superior para el pie de página */
+    width: 100%; /* Ancho completo del pie de página */
+    bottom: 4; /* Posiciona el pie de página en la parte inferior del contenedor */
+}
+
+/* Estilo de los enlaces en el pie de página */
+footer a {
+    color: #5aadff; /* Color de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    transition: color 0.3s; /* Transición suave para el cambio de color */
+}
+
+footer a:hover {
+    color: #ffffff; /* Cambia el color al pasar el ratón por encima */
+    text-decoration: underline; /* Agrega subrayado al pasar el ratón */
+}
+
+/* Estilo para el contenido del pie de página */
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en una columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+    gap: 0.5em; /* Espacio entre los elementos del pie de página */
+}
+
+/* Ajustes para dispositivos pequeños */
+@media (max-width: 768px) {
+    footer {
+        padding: 1em 0.5em; /* Ajusta el padding para pantallas pequeñas */
+    }
+}
+
+/* Medios de consulta (media queries) */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Organiza el contenido en una columna en pantallas pequeñas */
+    }
+
+    .image-item {
+        flex: 1 1 50%; /* Ajusta el tamaño de las imágenes en pantallas más pequeñas */
+        max-width: 50%; /* Ajusta el ancho máximo de las imágenes en pantallas más pequeñas */
+    }
+
+    h1 {
+        font-size: 2rem; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        align-items: flex-start; /* Alinea el contenido del encabezado a la izquierda en pantallas pequeñas */
+    }
+
+    .image-item {
+        flex: 1 1 100%; /* Ajusta el tamaño de las imágenes a la anchura completa en pantallas muy pequeñas */
+        max-width: 100%; /* Ajusta el ancho máximo de las imágenes en pantallas muy pequeñas */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
+    }
+
+    nav {
+        flex-direction: column; /* Organiza el menú en una columna en pantallas pequeñas */
+        align-items: flex-start; /* Alinea los elementos del menú a la izquierda */
+    }
+}

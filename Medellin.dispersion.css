@@ -1,0 +1,487 @@
+/* Estilo general para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nerko One'; /* Fuente Nerko One aplicada */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total de los elementos */
+}
+/* Estilo del contenedor principal */
+main {
+    display: flex;
+    flex-direction: column; /* Organiza las secciones en una columna */
+    align-items: center; /* Centra horizontalmente todas las secciones */
+    justify-content: center; /* Centra verticalmente las secciones */
+    flex: 1; /* Permite que el contenido principal ocupe el espacio disponible */
+    padding: 40px;
+    padding-left: 900px; /* Ajusta este valor para mover las secciones a la derecha */
+    width: 500%;
+}
+
+/* Estilo para la sección principal */
+.section {
+    display: flex;
+    justify-content: center; /* Alinea las divisiones horizontalmente */
+    margin: 20px 0; /* Margen entre las secciones */
+    width: 100%; /* Ancho completo de la sección */
+    max-width: 900px; /* Ancho máximo de la sección */
+    padding: 20px;
+    border: 1px solid #cccccc00; /* Línea externa que envuelve toda la sección */
+    border-radius: 10px;
+    background-color: #ffffff00; /* Fondo blanco para las secciones */
+    margin-left: 120px; /* Ajusta este valor para mover las secciones a la derecha */
+}
+
+
+/* Estilo para cada división dentro de una sección */
+.division {
+    flex: 1; /* Hace que cada div ocupe el mismo espacio */
+    margin: 0 10px; /* Espacio entre los divs */
+    padding: 20px;
+    text-align: align left;
+    font-size: 1.1rem;
+    border-left: 1px solid #ffffff; /* Línea que separa las divisiones */
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+}
+
+.division img {
+    max-width: 100%; /* Asegura que la imagen no se desborde del div */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    border: 1px solid #001499; /* Agrega un borde alrededor de la imagen */
+    border-radius: 5px; /* Bordes redondeados en la imagen */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+
+/* Quita el borde izquierdo de la primera división en cada sección */
+.division:first-child {
+    border-left: none; 
+}
+/* Estilo del cuerpo de la página */
+body {
+    background-image: url("wp3925565.jpg"); /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen en el fondo */
+    background-attachment: fixed; /* Mantiene la imagen fija durante el desplazamiento */
+    color: #ffffff; /* Color del texto */
+    margin: 0; /* Elimina el margen predeterminado */
+    font-size: 16px; /* Tamaño de fuente base */
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1000px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 0; /* Elimina el padding predeterminado */
+    overflow: hidden; /* Evita problemas de desbordamiento */
+}
+
+/* Ajustar el tamaño del contenido dentro del contenedor */
+.section-text, .image-container {
+    max-width: 100%; /* Ajusta el ancho máximo al 100% del contenedor */
+    width: 100%; /* Asegura que el ancho sea 100% del contenedor, pero limitado por el max-width */
+}
+
+/* Estilo del encabezado (header) */
+header {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    width: 100%; /* Asegúrate de que el encabezado ocupe todo el ancho */
+    background-color: rgba(0, 9, 53, 0.588); /* Color de fondo con opacidad */
+    background-size: cover; /* Asegura que el gradiente cubra toda el área del encabezado */
+    background-position: center; /* Centra el gradiente */
+    background-attachment: fixed; /* Mantiene el fondo fijo durante el desplazamiento */
+    height: 20vh; /* Altura del encabezado como un porcentaje de la altura de la ventana */
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0); /* Sombra alrededor del encabezado */
+    border-radius: 2px; /* Bordes redondeados */
+    padding: 0em; /* Espacio alrededor del contenido del encabezado */
+    position: relative; /* Posiciona el encabezado en relación a su contenedor padre */
+}
+
+/* Contenedor del título y del menú en el header */
+.header-content {
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en una columna */
+    width: 100%; /* Ancho completo del encabezado */
+    height: 100%; /* Altura completa del encabezado */
+    position: relative; /* Posiciona el contenedor en relación a su contenedor padre */
+}
+
+/* Estilo del título principal */
+h1 {
+    font-size: 3.5rem; /* Tamaño de la fuente del título */
+    color: #ffffff; /* Color del texto del título */
+    margin: 0; /* Elimina el margen para centrar mejor */
+    text-shadow: 2px 2px 4px rgba(0, 0, 102, 0.351); /* Sombra del texto del título */
+    position: absolute; /* Posiciona el título en relación a su contenedor */
+    top: 60%; /* Ajusta la posición desde el borde superior del encabezado */
+    left: 10%; /* Ajusta la posición desde el borde izquierdo del encabezado */
+    transform: translateY(-70%); /* Centra verticalmente el título */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilo del menú de navegación */
+nav {
+    display: flex;
+    justify-content: flex-end; /* Alinea el menú a la derecha dentro del contenedor de encabezado */
+    gap: 10px; /* Espacio entre los elementos del menú */
+    margin-top: auto; /* Empuja el menú hacia abajo dentro del contenedor */
+    padding: 0 1em; /* Espacio a los lados del menú */
+    position: absolute; /* Posiciona el menú en relación a su contenedor */
+    bottom: 30%; /* Ajusta la posición desde el borde inferior del encabezado */
+    right: 2%; /* Ajusta la posición desde el borde derecho del encabezado */
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.0rem;
+    padding: 10px 15px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px;
+    background-color: rgb(1, 1, 99);
+}
+
+nav a:hover {
+    color: #b3e0ff;
+    background-color: rgba(0, 51, 102, 0);
+}
+a{
+    color: #ffffff;
+}
+nav a.active {
+    background-color: rgba(0, 51, 153, 0.513);
+    border: 2px solid #66b3ff00;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+/* Estilo para la sección principal */
+.section {
+    display: flex;
+    justify-content: flex-start; /* Cambiado a flex-start para mover a la derecha */
+    margin: 20px auto; /* Centrado verticalmente y espaciado */
+    width: 100%; /* Ajusta el ancho de la sección */
+    max-width: 2500px; /* Ancho máximo */
+    padding: 20px;
+    border: 0px solid #cccccc00; /* Borde transparente */
+    border-radius: 10px;
+    background-color: #01004700; /* Fondo transparente */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0); /* Sombra para darle profundidad */
+}
+
+/* Estilo para cada división dentro de una sección */
+.division {
+    flex: 1; /* Hace que cada div ocupe el mismo espacio */
+    margin: 0 20px; /* Espacio entre los divs */
+    padding: 20px;
+    text-align: justify;
+    font-size: 1.2rem;
+    border-left: 1px solid #fff9f900; /* Línea que separa las divisiones */
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    background-color: rgba(0, 2, 94, 0.418); /* Fondo blanco semi-transparente */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilo de las imágenes dentro de las divisiones */
+.division img {
+    max-width: 100%; /* Asegura que la imagen no se desborde del div */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    border: 1px solid #001499; /* Agrega un borde alrededor de la imagen */
+    border-radius: 5px; /* Bordes redondeados en la imagen */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+
+/* Quita el borde izquierdo de la primera división en cada sección */
+.division:first-child {
+    border-left: none; 
+}
+
+/* Estilo del pie de página */
+/* Estilo del pie de página */
+footer {
+    background-color: #00082c83; /* Fondo para las secciones */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: relative; /* Cambiado de absolute a relative */
+    bottom: 0;
+    margin-top: 20px; /* Asegura espacio arriba del footer */
+}
+
+.footer-contact {
+    margin-top: 20px; /* Espacio entre el contenido del pie de página y el borde */
+}
+
+/* Contenedor de las imágenes */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px; /* Espacio entre el encabezado y las imágenes */
+}
+
+/* Estilos para todas las imágenes */
+.image {
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Imagen pequeña (izquierda y derecha) */
+.small-image {
+    width: 150px;
+    height: 150px;
+}
+
+/* Imagen grande (la del medio) */
+.large-image {
+    width: 200px;
+    height: 200px;
+}
+
+/* Efecto al pasar el cursor sobre las imágenes */
+.image:hover {
+    transform: scale(1.2); /* Agrandar la imagen al 120% */
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Contenedor principal que divide el contenido en tres columnas */
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Estilo para las columnas */
+.column {
+    background-color: #011e4480;
+    padding: 20px;
+    flex: 1; /* Hace que las columnas sean de igual tamaño */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título dentro de cada columna */
+.column h2 {
+    margin-bottom: 15px;
+}
+
+/* Estilo del cuerpo */
+body {
+    background-color: #f4f4f4;
+    color: #eeecec;
+    padding: 0px;
+    text-align: center;
+}
+
+/* Estilo del título principal */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Estilo del menú de navegación */
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    background-color: #001499;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para el título de la sección de imágenes */
+.section-title h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Contenedor de las imágenes */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+/* Estilos para todas las imágenes */
+.image {
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Imagen pequeña (izquierda y derecha) */
+.small-image {
+    width: 250px;
+    height: 250px;
+}
+
+/* Imagen grande (la del medio) */
+.large-image {
+    width: 300px;
+    height: 300px;
+}
+
+/* Efecto al pasar el cursor sobre las imágenes */
+.image:hover {
+    transform: scale(1.3); /* Agrandar la imagen al 120% */
+}
+
+/* Contenedor de las tres columnas */
+.column-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+/* Estilos para cada columna */
+.column {
+    flex: 1; /* Cada columna ocupa el mismo espacio */
+    margin: 0 10px;
+    padding: 20px;
+    background-color: #0b0135bb;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(8, 8, 8, 0.1);
+}
+
+/* Estilo para los títulos de las columnas */
+.column h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+/* Ajustes responsive para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .column-container {
+        flex-direction: column; /* Las columnas se apilan en pantallas pequeñas */
+    }
+    
+    .column {
+        margin-bottom: 20px;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #faf5f5;
+    color: #f7f2f2;
+}
+
+/* Estilos de la sección */
+.section {
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin: 20px 0; /* Margen superior e inferior de 20px */
+    font-size: 4rem;
+    background-color: #0a003f88; /* Fondo con opacidad */
+}
+
+
+
+/* Estilos de las columnas principales */
+.column-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre columnas */
+}
+
+.column {
+    flex: 1;
+    background-color: #11036188;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilos para el contenedor de las subcolumnas en la tercera columna */
+.subcolumn-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Espacio entre las subcolumnas */
+    margin-top: 20px;
+}
+
+/* Estilos de las subcolumnas dentro de la tercera columna */
+.subcolumn {
+    flex: 1;
+    background-color: #11035f50;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Medios de consulta para pantallas pequeñas */
+@media (max-width: 768px) {
+    .column-container {
+        flex-direction: column;
+    }
+
+    .subcolumn-container {
+        flex-direction: column;
+    }
+}
+/* Imagen grande (la del medio) */
+.large-image {
+    width: 300px;
+    height: 300px;
+    border: 2px solid #ffffff; /* Borde blanco alrededor de la imagen grande */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Efecto hover para las imágenes */
+.image:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño de la imagen al pasar el cursor */
+}
+
+/* Ajustes responsivos para imágenes */
+@media (max-width: 768px) {
+    .small-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .large-image {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .small-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .large-image {
+        width: 200px;
+        height: 200px;
+    }
+}

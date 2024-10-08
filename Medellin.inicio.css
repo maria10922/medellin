@@ -1,0 +1,210 @@
+/* Estilo general para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nerko One'; /* Fuente Nerko One aplicada */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total de los elementos */
+}
+
+/* Estilo del cuerpo de la página */
+body {
+    background-image: url("wp3925565.jpg"); /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen en el fondo */
+    background-attachment: fixed; /* Mantiene la imagen fija durante el desplazamiento */
+    color: #ffffff; /* Color del texto */
+    margin: 0; /* Elimina el margen predeterminado */
+    font-size: 16px; /* Tamaño de fuente base */
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1000px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 0; /* Elimina el padding predeterminado */
+    overflow: hidden; /* Evita problemas de desbordamiento */
+}
+
+/* Estilo del encabezado (header) */
+header {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    background-color: #00082c83; /* Fondo para las secciones */
+    height: 20vh; /* Altura del encabezado como un porcentaje de la altura de la ventana */
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0); /* Sombra alrededor del encabezado */
+    padding: 1em; /* Espacio alrededor del contenido del encabezado */
+    position: relative; /* Posiciona el encabezado en relación a su contenedor padre */
+}
+
+/* Contenedor del título y del menú en el header */
+.header-content {
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en una columna */
+    width: 100%; /* Ancho completo del encabezado */
+}
+
+/* Estilo del título principal */
+h1 {
+    font-size: 3.5rem; /* Tamaño de la fuente del título */
+    color: #ffffff; /* Color del texto del título */
+    margin: 0; /* Elimina el margen para centrar mejor */
+    text-shadow: 2px 2px 4px rgba(0, 0, 102, 0.351); /* Sombra del texto del título */
+    position: absolute; /* Posiciona el título en relación a su contenedor */
+    top: 60%; /* Ajusta la posición desde el borde superior del encabezado */
+    left: 10%; /* Ajusta la posición desde el borde izquierdo del encabezado */
+    transform: translateY(-70%); /* Centra verticalmente el título */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilo del menú de navegación */
+nav {
+    display: flex;
+    justify-content: flex-end; /* Alinea el menú a la derecha dentro del contenedor de encabezado */
+    gap: 10px; /* Espacio entre los elementos del menú */
+    margin-top: auto; /* Empuja el menú hacia abajo dentro del contenedor */
+    padding: 0 1em; /* Espacio a los lados del menú */
+    position: absolute; /* Posiciona el menú en relación a su contenedor */
+    bottom: 30%; /* Ajusta la posición desde el borde inferior del encabezado */
+    right: 2%; /* Ajusta la posición desde el borde derecho del encabezado */
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.0rem;
+    padding: 10px 15px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 102);
+}
+
+nav a:hover {
+    color: #b3e0ff;
+    background-color: rgba(0, 51, 102, 0);
+}
+
+nav a.active {
+    background-color: rgba(0, 51, 153, 0.513);
+    border: 2px solid #66b3ff00;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+/* Estilo para la sección principal */
+.section {
+    display: flex;
+    justify-content: center; /* Alinea las divisiones horizontalmente */
+    margin: 20px auto; /* Espaciado ajustado */
+    width: 90%; /* Aumenta el ancho de la sección */
+    max-width: 2500px; /* Ancho máximo */
+    padding: 30px; /* Aumenta el padding interno */
+    border: 1px solid #cccccc00; /* Borde transparente */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: rgba(0, 1, 85, 0.418); /* Fondo semitransparente */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+}
+
+/* Estilo para cada división dentro de una sección */
+.division {
+    flex: 1; /* Hace que cada div ocupe el mismo espacio */
+    margin: 0 20px; /* Espacio entre los divs */
+    padding: 20px;
+    text-align: justify;
+    font-size: 1.0rem;
+    border-left: 1px solid #fff9f900; /* Línea que separa las divisiones */
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    background-color: rgba(0, 1, 85, 0); /* Fondo blanco semi-transparente */
+    border-radius: 0px; /* Bordes redondeados */
+}
+
+/* Estilo de las imágenes dentro de las divisiones */
+.division img {
+    max-width: 130%; /* Asegura que la imagen no se desborde del div */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    border: 0px solid #00149900; /* Agrega un borde alrededor de la imagen */
+    border-radius: 0px; /* Bordes redondeados en la imagen */
+    margin-bottom: 0px; /* Espacio entre la imagen y el texto */
+}
+
+/* Quita el borde izquierdo de la primera división en cada sección */
+.division:first-child {
+    border-left: none; 
+}
+
+/* Estilo del pie de página */
+footer {
+    background-image: linear-gradient(51deg, #00183780, #00183780); /* Gradiente de tonos azules oscuros */
+    color: #ffffff; /* Color del texto */
+    padding: 1em; /* Espacio interno */
+    text-align: center; /* Centra el texto */
+    width: 100%; /* Ancho completo del pie de página */
+    bottom: 0; /* Posiciona el pie de página en la parte inferior del contenedor */
+}
+
+/* Estilo de los enlaces en el pie de página */
+footer a {
+    color: #5aadff; /* Color de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    transition: color 0.3s; /* Transición suave para el cambio de color */
+}
+
+footer a:hover {
+    color: #ffffff; /* Cambia el color al pasar el ratón por encima */
+    text-decoration: underline; /* Agrega subrayado al pasar el ratón */
+}
+
+/* Estilo para el contenido del pie de página */
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en una columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+    gap: 0.5em; /* Espacio entre los elementos del pie de página */
+}
+
+/* Ajustes para dispositivos pequeños */
+@media (max-width: 768px) {
+    footer {
+        padding: 1em 0.5em; /* Ajusta el padding para pantallas pequeñas */
+    }
+}
+
+/* Medios de consulta (media queries) */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Organiza el contenido en una columna en pantallas pequeñas */
+    }
+
+    .image-item {
+        flex: 1 1 50%; /* Ajusta el tamaño de las imágenes en pantallas más pequeñas */
+        max-width: 50%; /* Ajusta el ancho máximo de las imágenes en pantallas más pequeñas */
+    }
+
+    h1 {
+        font-size: 2rem; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        align-items: flex-start; /* Alinea el contenido del encabezado a la izquierda en pantallas pequeñas */
+    }
+
+    .image-item {
+        flex: 1 1 100%; /* Ajusta el tamaño de las imágenes a la anchura completa en pantallas muy pequeñas */
+        max-width: 100%; /* Ajusta el ancho máximo de las imágenes en pantallas muy pequeñas */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
+    }
+
+    nav {
+        flex-direction: column; /* Organiza el menú en una columna en pantallas pequeñas */
+        align-items: flex-start; /* Alinea los elementos del menú a la izquierda */
+    }
+}

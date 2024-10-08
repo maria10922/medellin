@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: flex-start;  /* Alinea el contenido al inicio (izquierda) */
+    align-items: flex-start;      /* Alinea el contenido al inicio (arriba) */
+    height: 100vh;
+    background-color: #f0f0f0;
+    position: relative;           /* Para que el botón se posicione dentro de este contenedor */
+    padding: 20px;                /* Opcional: Añade espacio alrededor del borde del body */
+}
+
+/* Estilos del botón */
+.styled-button {
+    background-color: #0006609c;  /* Color azul del fondo */
+    color: white;                 /* Color del texto */
+    padding: 10px 20px;           /* Relleno alrededor del texto */
+    border: none;                 /* Sin borde */
+    border-radius: 5px;           /* Bordes redondeados */
+    font-size: 16px;              /* Tamaño del texto */
+    font-weight: bold;            /* Texto en negrita */
+    cursor: pointer;              /* Cursor de mano al pasar por encima */
+    transition: background-color 0.3s ease;  /* Efecto de transición */
+    position: absolute;           /* Posiciona el botón de manera absoluta */
+    top: 20px;                    /* Alinea el botón a 20px del borde superior */
+    left: 20px;                   /* Alinea el botón a 20px del borde izquierdo */
+}
+
+/* Cambio de color cuando el mouse está sobre el botón */
+.styled-button:hover {
+    background-color: #00063cb6;  /* Azul más oscuro al pasar el mouse */
+}
+
+
+h1 {
+    font-size: 28px;  /* Aumenta el tamaño del título */
+    margin-top: 0px;  /* Añade espacio superior para mover el título más abajo */
+    margin-bottom: 20px;
+    text-align: center;  /* Asegura que el título esté centrado */
+    color: #ffffff;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-image: url('wp3925565.jpg');  /* Imagen de fondo */
+    background-size: cover;  /* Cubre toda la pantalla */
+    background-position: center;  /* Centra la imagen */
+    background-repeat: no-repeat;  /* Evita que la imagen se repita */
+    background-attachment: fixed;  /* Mantiene la imagen estática al hacer scroll */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding-top: 50px;
+}
+
+
+.contact-form-container {
+    background-color: #000039c0;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.516);
+    width: 400px;
+}
+
+.contact-form-container h2 {
+    text-align: center;  /* Asegura que el título esté centrado */
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 18px;  /* Tamaño del subtítulo */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    font-size: 10px;
+    transition: border 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Rating Section */
+.rating {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.rating-label {
+    font-size: 20px;  /* Tamaño del título "Califícanos" */
+    margin-bottom: 30px;
+    display: block;
+    color: #ffffff;
+}
+
+.stars {
+    display: inline-flex;  /* Asegura que las estrellas estén en línea */
+    justify-content: center;
+    gap: 15px;  /* Espaciado entre estrellas */
+}
+
+.rating label {
+    cursor: pointer;
+    font-size: 30px;
+    color: transparent;
+    position: relative;
+    display: inline-block;
+}
+
+.rating label::before {
+    content: "★";
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #999999;
+    border: 2px solid rgb(3, 0, 60);  /* Borde negro alrededor de la estrella */
+    background-color: #e0e0e03f;  /* Fondo gris de la estrella */
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+}
+
+.rating input {
+    display: none;  /* Escondemos los inputs para evitar que aparezcan visualmente */
+}
+
+.rating input:checked ~ label::before,
+.rating label:hover::before,
+.rating label:hover ~ label::before {
+    color: #ffcc00;  /* Color amarillo al seleccionar o pasar el cursor */
+    background-color: #ffffff41;  /* Fondo blanco cuando se selecciona */
+    border: 2px solid rgb(3, 0, 76);
+}
